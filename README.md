@@ -21,7 +21,7 @@ Located in `auth-testing-lab/`, this lab focuses on testing various authenticati
 
 ```bash
 cd auth-testing-lab
-docker-compose up --build
+sudo docker compose up --build
 ```
 
 The application will be available at `http://localhost:5000`
@@ -32,7 +32,7 @@ Located in `identity_management_testing/`, this lab focuses on testing user iden
 
 ```bash
 cd identity_management_testing
-docker-compose up --build
+sudo docker compose up --build
 ```
 
 The application will be available at `http://localhost:3000`
@@ -43,7 +43,7 @@ Located in `xss/`, this lab focuses on testing Cross-Site Scripting vulnerabilit
 
 ```bash
 cd xss
-docker-compose up --build
+sudo docker compose up --build
 ```
 
 The application will be available at `http://localhost:8080`
