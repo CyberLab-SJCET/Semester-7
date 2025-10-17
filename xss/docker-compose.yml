@@ -1,0 +1,13 @@
+services:
+  vulnerable-dog-site:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge
