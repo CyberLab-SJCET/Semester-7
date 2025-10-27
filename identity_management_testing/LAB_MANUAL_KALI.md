@@ -1,6 +1,7 @@
 # Lab Setup
 
 ```bash
+npm run initial-setup
 sudo docker compose up --build
 ```
 
