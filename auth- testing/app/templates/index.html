@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron">
+            <h1 class="display-4">🔐 Authentication Testing Lab</h1>
+            <p class="lead">A deliberately vulnerable web application for learning authentication and authorization security testing.</p>
+            <hr class="my-4">
+            
+            <div class="vulnerability-info">
+                <h5>🎯 Intentionally Implemented Vulnerabilities:</h5>
+                <ul>
+                    <li><strong>Default Credentials</strong> - Common default username/password combinations</li>
+                    <li><strong>Weak Lockout Mechanism</strong> - Easily bypassable account lockout</li>
+                    <li><strong>Browser Cache Issues</strong> - Missing cache control headers</li>
+                    <li><strong>Weak Password Policy</strong> - Minimal password requirements</li>
+                    <li><strong>Insecure Password Reset</strong> - Predictable reset tokens</li>
+                    <li><strong>Session Management Issues</strong> - Long-lasting sessions</li>
+                </ul>
+            </div>
+
+            <div class="mt-4">
+                <h5>🚀 Getting Started:</h5>
+                <ol>
+                    <li>Use the <a href="{{ url_for('login') }}">Login</a> page to test authentication</li>
+                    <li>Try default credentials provided on the login page</li>
+                    <li>Test password reset functionality</li>
+                    <li>Attempt privilege escalation</li>
+                    <li>Check for session management issues</li>
+                </ol>
+            </div>
+
+            {% if not current_user.is_authenticated %}
+            <div class="mt-4">
+                <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Start Testing →</a>
+                <a class="btn btn-outline-secondary btn-lg" href="{{ url_for('register') }}" role="button">Register New Account</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
