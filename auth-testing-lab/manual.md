@@ -23,7 +23,7 @@ To identify and exploit common authentication vulnerabilities including default 
 
 **Procedure:**
 
-echo -e "admin\nuser\ntest\ndemo\nguest\nroot" > users.txt
+echo -e "admin\nuser\ntest\ndemo\nguest\nroot" > users.txt &&
 echo -e "admin\npassword\ntest\ndemo\n123456\nletmein" > passwords.txt
 Execute Hydra attack
 
