@@ -50,6 +50,6 @@ EXP Recon-ng:
              * show hosts ( shows the collected data)
              * copy edit (export the collecetd data)
 
-
+wpscan --url "URL" --api-token=token
 
  
